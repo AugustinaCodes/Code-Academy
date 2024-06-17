@@ -1,0 +1,40 @@
+.toggleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: #f0f0f0;
+}
+
+.toggleCheckbox {
+  display: none;
+}
+
+.toggleLabel {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.toggleCheckbox:checked + .toggleLabel {
+  background-color: #4caf50;
+}
+
+.toggleCheckbox:checked + .toggleLabel .toggleButton {
+  transform: translateX(30px);
+}

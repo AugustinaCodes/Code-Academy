@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from 'react'
 import './App.css'
 import Timer from './components/Timer/Timer';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
+import FocusInput from './components/FocusInput/FocusInput';
+import AudioPlayer from './components/AudioPlayer/AudioPlayer';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -37,6 +39,9 @@ function App() {
         showTimer && <Timer />
       }
       <VideoPlayer />
+      <br />
+      <FocusInput />
+      <AudioPlayer />
     </div>
   )
 }
