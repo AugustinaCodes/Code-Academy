@@ -6,9 +6,11 @@ import TodosContainer from "./components/TodosContainer/TodosContainer";
 function App() {
   const [todos, setTodos] = useState([]);
 
+  const API_URL = import.meta.env.VITE_API_URL;
+
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:4000/todo")
+      .get(`${API_URL}/todo`)
       .then((response) => {
         setTodos(response.data)
       })

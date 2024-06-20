@@ -1,6 +1,7 @@
 import styles from "./Todo.module.css";
 
 export default function Todo({ todo }) {
+
   return (
     <div className={styles.card}>
       <h5>{todo.title}</h5>
