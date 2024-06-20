@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
 import TodosContainer from "./components/TodosContainer/TodosContainer";
+import TodosForm from "./components/TodosForm/TodosForm";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -18,7 +19,8 @@ function App() {
   }, []);
 
   return <div>
-    <TodosContainer todos={todos} />
+    <TodosContainer setTodos={setTodos} todos={todos} />
+    <TodosForm setTodos={setTodos} />
   </div>;
 }
 
