@@ -1,0 +1,6 @@
+.modal {
+    position: absolute;
+    background-color: rgba(194, 182, 166, 0.432);
+    inset: 0;
+    text-align: center;
+}
