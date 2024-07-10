@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { Box, TextField, Button } from "@mui/material";
-import "@fontsource/roboto/400.css";
+import PokemonDisplay from "../PokemonDisplay/PokemonDisplay";
 
 export default function PokemonForm() {
   const [pokemonName, setPokemonName] = useState("");
+  const [submittedName, setSubmittedName] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
-    setPokemonName(pokemonName);
+    setSubmittedName(pokemonName);
   }
 
   return (
@@ -42,6 +43,7 @@ export default function PokemonForm() {
           Submit
         </Button>
       </Box>
+      {submittedName && <PokemonDisplay pokemonName={submittedName} />}
     </Box>
   );
 }
